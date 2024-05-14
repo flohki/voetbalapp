@@ -13,7 +13,7 @@
 
     {{-- @include('layouts.includes.user-menu') --}}
 
-    {{-- @include('layouts.includes.header') --}}
+    @include('layouts.includes.header')
 
     <div>
         @yield('content')
