@@ -8,7 +8,6 @@
     <title>@yield('title') / KVV Heusden-Zolder</title>
     @yield('styles') <!-- Hier kunnen pagina-specifieke CSS-bestanden worden toegevoegd -->
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">

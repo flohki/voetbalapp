@@ -123,7 +123,7 @@ body {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 400px; /* Pas de hoogte aan indien nodig */
+    height: 600px; /* Pas de hoogte aan indien nodig */
 }
 
 .slider {
@@ -151,4 +151,56 @@ body {
     height: 100%;
     object-fit: cover; /* Zorg ervoor dat de afbeelding de slide volledig bedekt zonder uit te rekken */
     display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links-section, .news-section {
+        min-width: 100%;
+    }
+
+    .slider-section {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-section h1 {
+        font-size: 28px;
+    }
+
+    .slider-section {
+        height: 400px;
+    }
+
+    .news-article h3 {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section h1 {
+        font-size: 24px;
+    }
+
+    .slider-section {
+        height: 300px;
+    }
+
+    .news-article h3 {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
 }
