@@ -1,5 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif; /* Gebruik Roboto als standaard lettertype voor de hele website */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,4 +17,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-form input, .contact-form select, .contact-form textarea, .contact-form button {
     font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    flex: 1;
+    padding-bottom: 60px; /* Height of the footer */
 }

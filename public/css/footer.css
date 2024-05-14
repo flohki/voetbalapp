@@ -1,0 +1,33 @@
+.footer {
+    background: #008000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-img .logo {
+    max-width: 100px;
+}
+
+.footer-bottom {
+    background-color: #888;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #FFD700;
+    font-family: 'Roboto', sans-serif;
+}
