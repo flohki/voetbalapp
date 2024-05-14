@@ -10,39 +10,49 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-  }
+}
 
-  body {
+body {
     padding-top: 60px; /* Voeg voldoende padding toe om de header ruimte te geven, zodat inhoud niet eronder verborgen wordt */
-  }
+}
 
-  nav ul {
+nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+}
 
-  nav ul li {
+nav ul li {
     margin: 0 10px;
     position: relative; /* Nodig voor de dropdown */
-  }
+}
 
-  nav ul li a {
+nav ul li a {
     color: #FFD700; /* Gele tekst */
     text-decoration: none;
     padding: 5px 10px;
     transition: background 0.3s ease, color 0.3s ease; /* Toevoegen van kleur overgang */
-  }
+}
 
-  nav ul li a:hover {
-    background: #008000; /* Groene achtergrond bij hover */
-    color: #FFD700; /* Gele kleur bij hover */
+nav ul li a:hover {
+    background: #FFD700; /* Gele achtergrond bij hover */
+    color: #008000; /* Groene kleur bij hover */
     border-radius: 4px;
-  }
+}
 
-  /* Dropdown menu styling */
-  .dropdown-content {
+/* Voeg een pijltje toe aan dropdown menu items */
+.dropdown > a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-arrow {
+    margin-left: 5px;
+}
+
+/* Dropdown menu styling */
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #FFD700; /* Gele achtergrond */
@@ -50,31 +60,31 @@ header {
     z-index: 1;
     border-radius: 4px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-  }
+}
 
-  .dropdown-content li {
+.dropdown-content li {
     margin: 0;
-  }
+}
 
-  .dropdown-content a {
+.dropdown-content a {
     display: block;
     padding: 10px;
     color: #008000; /* Groene tekst */
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease;
-  }
+}
 
-  .dropdown-content a:hover {
+.dropdown-content a:hover {
     background-color: #008000; /* Groene achtergrond bij hover */
     color: #FFD700; /* Gele tekst bij hover */
-  }
+}
 
-  /* Laat de dropdown zien bij hover */
-  .dropdown:hover .dropdown-content {
+/* Laat de dropdown zien bij hover */
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
-  .sidebar {
+.sidebar {
     display: none;
     flex-direction: column;
     position: fixed;
@@ -85,63 +95,97 @@ header {
     background: rgba(0, 128, 0, 0.9); /* Transparante groene achtergrond */
     padding: 10px;
     z-index: 1000;
-  }
+}
 
-  .sidebar .dropdown {
+.sidebar .dropdown {
     margin: 0 0 10px 0;
-  }
+}
 
-  .sidebar .dropdown-content {
+.sidebar .dropdown-content {
     display: none;
     position: relative;
     background-color: #FFD700; /* Gele achtergrond */
     width: 100%;
     box-shadow: none;
-  }
+}
 
-  .sidebar .dropdown-content a {
+.sidebar .dropdown-content a {
     color: #008000; /* Groene tekst */
-  }
+}
 
-  .sidebar .dropdown-content a:hover {
+.sidebar .dropdown-content a:hover {
     background-color: #008000; /* Groene achtergrond bij hover */
     color: #FFD700; /* Gele tekst bij hover */
-  }
+}
 
-  .sidebar .dropdown:hover .dropdown-content {
+.sidebar .dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
-  .sidebar li {
+.sidebar li {
     margin: 10px 0;
-  }
+}
 
-  .sidebar li a {
+.sidebar li a {
     color: #FFD700; /* Gele tekst */
-  }
+}
 
-  .sidebar li a:hover {
-    background: #008000; /* Groene achtergrond bij hover */
-    color: #FFD700; /* Gele kleur bij hover */
-  }
+.sidebar li a:hover {
+    background: #FFD700; /* Gele achtergrond bij hover */
+    color: #008000; /* Groene kleur bij hover */
+}
 
-  .hideOnMobile {
+.hideOnMobile {
     display: none;
-  }
+}
 
-  .menu-button {
+.menu-button {
     display: block;
     cursor: pointer;
     color: #fff;
-  }
+}
 
-  /* Responsive styling */
-  @media (min-width: 800px) {
+/* Auth Buttons */
+.auth-button {
+    color: #006400; /* Donkergroene tekst */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    background: none; /* Geen achtergrond in normale staat */
+}
+
+.auth-button:hover {
+    background: #004d00; /* Nog donkerder groen bij hover */
+    color: #FFD700; /* Gele tekst bij hover */
+}
+
+.sidebar .auth-button {
+    color: #006400; /* Donkergroene kleur */
+}
+
+.sidebar .auth-button:hover {
+    background: #004d00; /* Nog donkerder groen bij hover */
+    color: #FFD700; /* Gele tekst bij hover */
+}
+
+/* Responsive styling */
+@media (min-width: 800px) {
     .menu-button {
-      display: none;
+        display: none;
     }
 
     .hideOnMobile {
-      display: block;
+        display: block;
     }
-  }
+
+    .sidebar {
+        display: none !important; /* Zorg ervoor dat de sidebar verborgen blijft op grotere schermen */
+    }
+
+    nav ul {
+        display: flex;
+    }
+}
