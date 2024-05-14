@@ -14,16 +14,13 @@
 </head>
 
 <body>
-
-    {{-- @include('layouts.includes.user-menu') --}}
-
     @include('layouts.includes.header')
 
-    <div>
+    <div class="content">
         @yield('content')
     </div>
 
-    {{-- @include('layouts.includes.footer') --}}
+    @include('layouts.includes.footer')
     @yield('scripts') <!-- Hier kunnen pagina-specifieke JavaScript-bestanden worden toegevoegd -->
 </body>
 
