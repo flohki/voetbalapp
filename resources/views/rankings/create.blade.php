@@ -14,6 +14,9 @@
             @csrf
             <div class="form-group">
                 <label for="ploegnaam">Ploegnaam:</label>
+                @error('ploegnaam')
+                    <div class="error">{{ $message }}</div>
+                @enderror
                 <input type="text" class="form-control" id="ploegnaam" name="ploegnaam">
             </div>
             <div class="form-group">

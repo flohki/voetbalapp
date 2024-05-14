@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClubController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CardsController;
 use App\Http\Controllers\GoalsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RankingController;
 use App\Http\Controllers\CalenderController;
+use App\Http\Controllers\NewsArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +22,7 @@ use App\Http\Controllers\CalenderController;
 */
 
 // Home Route
-Route::view('/', 'home')->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Dashboard Route
 Route::get('/dashboard', function () {
@@ -81,3 +83,17 @@ Route::delete('/cards/{card}', [CardsController::class, 'destroy'])->name('cards
 Route::put('/cards/{card}', [CardsController::class, 'update'])->name('cards.update');
 });
 Route::get('/cards', [CardsController::class, 'index'])->name('cards.index');
+
+//News Routes
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('news/create', [NewsArticleController::class, 'create'])->name('news.create');
+    Route::post('news', [NewsArticleController::class, 'store'])->name('news.store');
+    Route::get('news/{newsArticle}/edit', [NewsArticleController::class, 'edit'])->name('news.edit');
+    Route::put('news/{newsArticle}', [NewsArticleController::class, 'update'])->name('news.update');
+    Route::delete('news/{newsArticle}', [NewsArticleController::class, 'destroy'])->name('news.destroy');
+});
+Route::get('/news', [NewsArticleController::class, 'index'])->name('news.index');
+Route::get('news/{newsArticle}', [NewsArticleController::class, 'show'])->name('news.show');
+
+// Route voor de homepagina om de laatste 2 artikelen te tonen
+Route::get('/', [NewsArticleController::class, 'recent'])->name('home');
