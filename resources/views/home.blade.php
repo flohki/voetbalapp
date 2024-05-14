@@ -1,5 +1,12 @@
 @extends('layouts.default')
 
+@section('title', 'Home')
+
+@section('styles')
+
+@endsection
+
+
 @section('content')
     <h1>Welkom op de homepage</h1>
     <ul>

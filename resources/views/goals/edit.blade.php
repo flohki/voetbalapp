@@ -1,5 +1,12 @@
 @extends('layouts.default')
 
+@section('title', 'Goals')
+
+@section('styles')
+
+@endsection
+
+
 @section('content')
     <div class="container">
         <h2>Spelers Bewerken</h2>

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const accordions = document.querySelectorAll('.accordion-header');
+    var accordions = document.querySelectorAll('.accordion-header');
 
     accordions.forEach(function (accordion) {
         accordion.addEventListener('click', function () {
-            const content = this.nextElementSibling;
+            var content = this.nextElementSibling;
             this.classList.toggle('active');
             if (content.style.display === "block") {
                 content.style.display = "none";
