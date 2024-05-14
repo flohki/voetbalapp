@@ -1,10 +1,19 @@
-nav {
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Zorg ervoor dat de header boven andere elementen blijft */
+    background: #008000; /* Zorg ervoor dat de achtergrondkleur dezelfde blijft */
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: #008000; /* Groene achtergrond */
-    color: #fff;
+  }
+
+  body {
+    padding-top: 60px; /* Voeg voldoende padding toe om de header ruimte te geven, zodat inhoud niet eronder verborgen wordt */
   }
 
   nav ul {
