@@ -14,6 +14,7 @@
             </li>
             <li><a href="{{ route('club.index') }}">Clubinfo</a></li>
             <li><a href="{{ route('club.contact') }}">Contact</a></li>
+            <li><a href="{{ route('news.index') }}">Nieuws</a></li>
             <li class="dropdown">
                 <a href="#">Wedstrijden <span class="dropdown-arrow">&#x25BC;</span></a>
                 <ul class="dropdown-content">
@@ -39,6 +40,7 @@
             <li><a href="{{ route('home') }}">K.V.V. Heusden-Zolder</a></li>
             <li class="hideOnMobile"><a href="{{ route('club.index') }}">Clubinfo</a></li>
             <li><a href="{{ route('club.contact') }}">Contact</a></li>
+            <li class="hideOnMobile"><a href="{{ route('news.index') }}">Nieuws</a></li>
             <li class="dropdown hideOnMobile">
                 <a href="#">Wedstrijden <span class="dropdown-arrow">&#x25BC;</span></a>
                 <ul class="dropdown-content">

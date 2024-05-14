@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between the logo and heading */
+    vertical-align: middle; /* Align the logo with the middle of the heading */
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    color: #008000;
+    margin: 0; /* Adjust the margin if needed */
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #333;
+    width: 100%;
+    margin-top: 20px; /* Add margin to separate the text from the heading */
+}
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.links-section, .news-section {
+    flex: 1;
+    min-width: 45%;
+    margin: 10px;
+}
+
+.links-section h2, .news-section h2 {
+    font-size: 28px;
+    color: #008000;
+    margin-bottom: 20px;
+}
+
+.links-section p {
+    font-size: 16px;
+    color: #333;
+}
+
+.links-section .map {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #008000;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #006400;
+}
+
+.news-article {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.news-article h3 {
+    font-size: 24px;
+    color: #008000;
+    margin-bottom: 10px;
+}
+
+.news-article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.news-article p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-article a {
+    color: #008000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.news-article a:hover {
+    color: #FFD700;
+}
+
+.slider-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Pas de hoogte aan indien nodig */
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorg ervoor dat de afbeelding de slide volledig bedekt zonder uit te rekken */
+    display: block;
+}
