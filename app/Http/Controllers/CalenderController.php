@@ -10,7 +10,7 @@ class CalenderController extends Controller
 {
     public function index()
     {
-        $calenders = Calender::all();
+        $calenders = Calender::orderBy('date', 'asc')->get(); // Aannemend dat je wilt sorteren op datum
         return view('calenders.index', compact('calenders'));
     }
     public function create()

@@ -9,7 +9,7 @@ class RankingController extends Controller
 {
     public function index()
     {
-        $rankings = Ranking::all();
+        $rankings = Ranking::orderBy('punten_behaald', 'desc')->get();
         return view('rankings.index', compact('rankings'));
     }
 

@@ -10,8 +10,9 @@ class GoalsController extends Controller
 {
     public function index()
     {
-        $goals = Goal::all();
+        $goals = Goal::orderBy('totaal_doelpunten', 'desc')->get(); // Aannemend dat je wilt sorteren op gescoorde goals
         return view('goals.index', compact('goals'));
+
     }
 
     public function create()

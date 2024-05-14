@@ -3,7 +3,7 @@
 @section('title', 'Kalender')
 
 @section('styles')
-
+    <link rel="stylesheet" href="{{ asset('css/formulier.css') }}">
 @endsection
 
 @section('content')

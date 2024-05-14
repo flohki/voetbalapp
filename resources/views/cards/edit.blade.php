@@ -3,7 +3,7 @@
 @section('title', 'Kaarten')
 
 @section('styles')
-
+    <link rel="stylesheet" href="{{ asset('css/formulier.css') }}">
 @endsection
 
 
@@ -15,7 +15,8 @@
             @method('PUT')
             <div class="form-group">
                 <label for="naam_speler">Naam speler:</label>
-                <input type="text" class="form-control" id="naam_speler" name="naam_speler" value="{{ $card->naam_speler }}">
+                <input type="text" class="form-control" id="naam_speler" name="naam_speler"
+                    value="{{ $card->naam_speler }}">
             </div>
             <div class="form-group">
                 <label for="gele_kaart">Gele kaarten:</label>
