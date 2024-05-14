@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title', 'Goals')
-
+<link rel="stylesheet" href="{{ asset('css/tabel.css') }}">
 @section('styles')
 
 @endsection

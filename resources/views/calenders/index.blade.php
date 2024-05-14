@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title', 'Kalender')
-
+<link rel="stylesheet" href="{{ asset('css/tabel.css') }}">
 @section('styles')
 
 @endsection
@@ -19,7 +19,7 @@
                     <th>Thuisploeg</th>
                     <th>Uitploeg</th>
                     <th>uitslag</th>
-                    <th>Verslag</th>
+                    {{-- <th>Verslag</th> --}}
                     <th>Acties</th>
                 </tr>
             </thead>
@@ -31,7 +31,7 @@
                         <td>{{ $calender->thuisploeg }}</td>
                         <td>{{ $calender->uitploeg }}</td>
                         <td>{{ $calender->uitslag }}</td>
-                        <td>{{ $calender->verslag_path }}</td>
+                        {{-- <td>{{ $calender->verslag_path }}</td> --}}
                         <td>
                             <form action="{{ route('calenders.destroy', $calender->id) }}" method="POST">
                                 <a href="{{ route('calenders.edit', $calender->id) }}" class="btn btn-primary">Bewerken</a>
