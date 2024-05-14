@@ -20,18 +20,18 @@ class ClubController extends Controller
 
     public function submitContact(Request $request)
     {
-        $request->validate([
+        $contactData = $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',
-            'subject' => 'required|string',
+            'subject' => 'required|string|not_in:,',
             'message' => 'required|string',
         ]);
 
         // Send email or save to database
-        Mail::to('your-email@example.com')->send(new ContactFormMail($request->all()));
+        Mail::to('flore-jan_smeets@hotmail.com')->send(new ContactFormMail($contactData));
 
-        return redirect()->route('club.contact')->with('success', 'Your message has been sent successfully!');
+        return redirect()->route('club.contact')->with('success', 'je bericht is goed ontvangen. Wij zullen hier spoedig op antwoorden.');
     }
 }

@@ -14,6 +14,7 @@ class ContactFormMail extends Mailable
     use Queueable, SerializesModels;
 
     public $contactData;
+
     /**
      * Create a new message instance.
      */
@@ -21,11 +22,19 @@ class ContactFormMail extends Mailable
     {
         $this->contactData = $contactData;
     }
+
+    /**
+     * Build the message.
+     */
     public function build()
     {
-        return $this->view('emails.contact')
+        return $this->from($this->contactData['email']) // Verander dit naar het gewenste 'from' e-mailadres
+                    ->to('flore-jan_smeets@hotmail.com')
+                    ->subject('Contact Form Mail')
+                    ->view('emails.contact')
                     ->with('contactData', $this->contactData);
     }
+
     /**
      * Get the message envelope.
      */
@@ -34,25 +43,5 @@ class ContactFormMail extends Mailable
         return new Envelope(
             subject: 'Contact Form Mail',
         );
-    }
-
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'view.name',
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
-    public function attachments(): array
-    {
-        return [];
     }
 }

@@ -58,6 +58,11 @@
     align-self: center;
     width: 100px; /* Fixed width for the button */
 }
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
 .contact-form button:hover {
     background-color: #e5c700; /* Slightly darker yellow for hover effect */
