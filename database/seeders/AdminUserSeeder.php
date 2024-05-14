@@ -18,6 +18,5 @@ class AdminUserSeeder extends Seeder
             'email' => 'admin@example.com',
             'password' => bcrypt('admintest123voetbal'),
         ]);
-
     }
 }
