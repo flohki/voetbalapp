@@ -1,5 +1,5 @@
 <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-<script src="{{ asset('js/header.js') }}"></script>
+<script src="{{ asset('js/header.js') }}" defer></script> <!-- defer toegevoegd om het laden uit te stellen tot de pagina klaar is -->
 
 <header>
     <nav>
@@ -12,7 +12,8 @@
                     </svg>
                 </a>
             </li>
-            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('club.index') }}">Clubinfo</a></li>
+            <li><a href="{{ route('club.contact') }}">Contact</a></li>
             <li class="dropdown">
                 <a href="#">Wedstrijden</a>
                 <ul class="dropdown-content">
@@ -24,8 +25,9 @@
             </li>
         </ul>
         <ul>
-            <li><a href="#">Voetbalclub</a></li>
-            <li class="hideOnMobile"><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('home') }}">Voetbalclub</a></li>
+            <li class="hideOnMobile"><a href="{{ route('club.index') }}">Clubinfo</a></li>
+            <li><a href="{{ route('club.contact') }}">Contact</a></li>
             <li class="dropdown hideOnMobile">
                 <a href="#">Wedstrijden</a>
                 <ul class="dropdown-content">

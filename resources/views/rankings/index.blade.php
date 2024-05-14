@@ -1,8 +1,14 @@
 @extends('layouts.default')
 
+@section('title', 'Klassement')
+
+@section('styles')
+
+@endsection
+
 @section('content')
     <div class="container">
-        <h2>Rankings</h2>
+        <h2>Klassement</h2>
         <a href="{{ route('rankings.create') }}" class="btn btn-success mb-2">Toevoegen</a>
         <table class="table">
             <thead>

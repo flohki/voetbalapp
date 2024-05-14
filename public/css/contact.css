@@ -1,0 +1,87 @@
+.contact-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #008000; /* Background color */
+    color: #FFD700; /* Font color */
+}
+
+.contact-form h1 {
+    text-align: center;
+    color: #FFD700; /* Font color */
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    text-align: center;
+    color: #FFD700; /* Font color */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    color: #FFD700; /* Font color */
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px; /* Set a height for the textarea */
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #FFD700; /* Button background color */
+    color: #008000; /* Button font color */
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    width: 100px; /* Fixed width for the button */
+}
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #e5c700; /* Slightly darker yellow for hover effect */
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+        width: auto; /* Make button width responsive */
+    }
+}

@@ -1,5 +1,12 @@
 @extends('layouts.default')
 
+@section('title', 'Kalender')
+
+@section('styles')
+
+@endsection
+
+
 @section('content')
     <div class="container">
         <h2>Kalenders</h2>

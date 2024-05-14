@@ -1,5 +1,12 @@
 @extends('layouts.default')
 
+@section('title', 'Kaarten')
+
+@section('styles')
+
+@endsection
+
+
 @section('content')
     <div class="container">
         <h2>Nieuwe Speler Toevoegen</h2>

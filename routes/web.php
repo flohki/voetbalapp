@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\CalenderController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClubController;
 use App\Http\Controllers\CardsController;
 use App\Http\Controllers\GoalsController;
 use App\Http\Controllers\RankingController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CalenderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'home')->name('home');
+
+Route::get('/club', [ClubController::class, 'index'])->name('club.index');
+Route::get('/club/contact', [ClubController::class, 'contact'])->name('club.contact');
+Route::post('/club/contact', [ClubController::class, 'submitContact'])->name('club.submitContact');
 
 Route::get('/rankings', [RankingController::class, 'index'])->name('rankings.index');
 Route::get('/rankings/create', [RankingController::class, 'create'])->name('rankings.create');

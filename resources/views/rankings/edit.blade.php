@@ -1,5 +1,12 @@
 @extends('layouts.default')
 
+@section('title', 'Klassement')
+
+@section('styles')
+
+@endsection
+
+
 @section('content')
     <div class="container">
         <h2>Klassement Bewerken</h2>
