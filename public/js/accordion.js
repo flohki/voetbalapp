@@ -1,14 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var accordions = document.querySelectorAll('.accordion-header');
+    const accordions = document.querySelectorAll('.accordion-header');
 
     accordions.forEach(function (accordion) {
         accordion.addEventListener('click', function () {
-            var content = this.nextElementSibling;
+            const content = this.nextElementSibling;
+
+            // Toggle the active class on the header
             this.classList.toggle('active');
-            if (content.style.display === "block") {
-                content.style.display = "none";
+
+            // Check if the content is already open
+            if (content.style.maxHeight) {
+                // Close the content
+                content.style.maxHeight = null;
             } else {
-                content.style.display = "block";
+                // Open the content
+                content.style.maxHeight = content.scrollHeight + "px";
             }
         });
     });

@@ -21,7 +21,6 @@
     </div>
 
     {{-- @include('layouts.includes.footer') --}}
-
     @yield('scripts') <!-- Hier kunnen pagina-specifieke JavaScript-bestanden worden toegevoegd -->
 </body>
 

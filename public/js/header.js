@@ -1,3 +1,11 @@
+function showSidebar() {
+    document.querySelector('.sidebar').style.display = 'block';
+}
+
+function hideSidebar() {
+    document.querySelector('.sidebar').style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const accordions = document.querySelectorAll('.accordion-header');
 
@@ -12,4 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // Event listeners for the sidebar
+    document.querySelector('.menu-button').addEventListener('click', showSidebar);
+    document.querySelector('.sidebar li:first-child a').addEventListener('click', hideSidebar);
 });

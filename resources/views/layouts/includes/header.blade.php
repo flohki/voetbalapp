@@ -1,5 +1,5 @@
 <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-<script src="{{ asset('js/header.js') }}"></script>
+<script src="{{ asset('js/header.js') }}" defer></script> <!-- defer toegevoegd om het laden uit te stellen tot de pagina klaar is -->
 
 <header>
     <nav>
