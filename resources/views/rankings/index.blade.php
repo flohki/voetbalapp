@@ -9,7 +9,9 @@
 @section('content')
     <div class="container">
         <h2>Klassement</h2>
-        <a href="{{ route('rankings.create') }}" class="btn mb-2">Toevoegen</a>
+        @auth
+            <a href="{{ route('rankings.create') }}" class="btn mb-2">Toevoegen</a>
+        @endauth
         <div class="table-container">
             <table class="table">
                 <thead>
@@ -23,7 +25,9 @@
                         <th>D-</th>
                         <th>D</th>
                         <th>Punten</th>
-                        <th>Acties</th>
+                        @auth
+                            <th>Acties</th>
+                        @endauth
                     </tr>
                 </thead>
                 <tbody>
@@ -38,15 +42,17 @@
                             <td>{{ $ranking->doelpunten_tegen }}</td>
                             <td>{{ $ranking->doelpunten_verschil }}</td>
                             <td>{{ $ranking->punten_behaald }}</td>
-                            <td>
-                                <form action="{{ route('rankings.destroy', $ranking->id) }}" method="POST">
-                                    <a href="{{ route('rankings.edit', $ranking->id) }}"
-                                        class="btn btn-primary">Bewerken</a>
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Verwijderen</button>
-                                </form>
-                            </td>
+                            @auth
+                                <td>
+                                    <form action="{{ route('rankings.destroy', $ranking->id) }}" method="POST">
+                                        <a href="{{ route('rankings.edit', $ranking->id) }}"
+                                            class="btn btn-primary">Bewerken</a>
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Verwijderen</button>
+                                    </form>
+                                </td>
+                            @endauth
                         </tr>
                     @endforeach
                 </tbody>

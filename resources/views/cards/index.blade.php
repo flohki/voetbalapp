@@ -9,7 +9,9 @@
 @section('content')
     <div class="container">
         <h2>Kaarten</h2>
-        <a href="{{ route('cards.create') }}" class="btn btn-success mb-2">Toevoegen</a>
+        @auth
+            <a href="{{ route('cards.create') }}" class="btn btn-success mb-2">Toevoegen</a>
+        @endauth
         <table class="table">
             <thead>
                 <tr>
@@ -17,7 +19,9 @@
                     <th>Gele kaart</th>
                     <th>Twee keer geel</th>
                     <th>Rode kaart</th>
-                    <th>Acties</th>
+                    @auth
+                        <th>Acties</th>
+                    @endauth
                 </tr>
             </thead>
             <tbody>
@@ -27,14 +31,16 @@
                         <td>{{ $card->gele_kaart }}</td>
                         <td>{{ $card->twee_geel }}</td>
                         <td>{{ $card->rode_kaart }}</td>
-                        <td>
-                            <form action="{{ route('cards.destroy', $card->id) }}" method="POST">
-                                <a href="{{ route('cards.edit', $card->id) }}" class="btn btn-primary">Bewerken</a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Verwijderen</button>
-                            </form>
-                        </td>
+                        @auth
+                            <td>
+                                <form action="{{ route('cards.destroy', $card->id) }}" method="POST">
+                                    <a href="{{ route('cards.edit', $card->id) }}" class="btn btn-primary">Bewerken</a>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Verwijderen</button>
+                                </form>
+                            </td>
+                        @endauth
                     </tr>
                 @endforeach
             </tbody>

@@ -1,16 +1,17 @@
 @extends('layouts.default')
 
 @section('title', 'Kalender')
-<link rel="stylesheet" href="{{ asset('css/tabel.css') }}">
 @section('styles')
-
+    <link rel="stylesheet" href="{{ asset('css/tabel.css') }}">
 @endsection
 
 
 @section('content')
     <div class="container">
         <h2>Kalenders</h2>
-        <a href="{{ route('calenders.create') }}" class="btn btn-success mb-2">Toevoegen</a>
+        @auth
+            <a href="{{ route('calenders.create') }}" class="btn btn-success mb-2">Toevoegen</a>
+        @endauth
         <table class="table">
             <thead>
                 <tr>
@@ -20,7 +21,9 @@
                     <th>Uitploeg</th>
                     <th>uitslag</th>
                     {{-- <th>Verslag</th> --}}
-                    <th>Acties</th>
+                    @auth
+                        <th>Acties</th>
+                    @endauth
                 </tr>
             </thead>
             <tbody>
@@ -32,14 +35,16 @@
                         <td>{{ $calender->uitploeg }}</td>
                         <td>{{ $calender->uitslag }}</td>
                         {{-- <td>{{ $calender->verslag_path }}</td> --}}
-                        <td>
-                            <form action="{{ route('calenders.destroy', $calender->id) }}" method="POST">
-                                <a href="{{ route('calenders.edit', $calender->id) }}" class="btn btn-primary">Bewerken</a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Verwijderen</button>
-                            </form>
-                        </td>
+                        @auth
+                            <td>
+                                <form action="{{ route('calenders.destroy', $calender->id) }}" method="POST">
+                                    <a href="{{ route('calenders.edit', $calender->id) }}" class="btn btn-primary">Bewerken</a>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Verwijderen</button>
+                                </form>
+                            </td>
+                        @endauth
                     </tr>
                 @endforeach
             </tbody>
