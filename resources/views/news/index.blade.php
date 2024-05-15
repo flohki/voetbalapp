@@ -8,7 +8,7 @@
     <div class="container">
         <h1>Nieuws Overzicht</h1>
         @auth
-            <a href="{{ route('news.create') }}" class="btn btn-success mb-3">Nieuw Artikel</a>
+            <a href="{{ route('news.create') }}" class="btn-extra">Nieuw Artikel</a>
         @endauth
         <div class="news-articles">
             @foreach ($newsArticles as $article)
@@ -18,7 +18,7 @@
                         <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}" class="img-thumbnail">
                     @endif
                     <p>{{ Str::limit($article->content, 200) }}</p>
-                    <a href="{{ route('news.show', $article->id) }}">Lees meer</a>
+                    <a href="{{ route('news.show', $article->id) }}" class="btn-extra">Lees meer</a>
                     <small>{{ $article->publication_date->format('d M Y') }}</small>
                     @auth
                         <div class="admin-actions">

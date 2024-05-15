@@ -10,8 +10,8 @@
     <div class="container">
         <div class="welcome-section">
             <img src="{{ asset('images/logo-kvvhz.png') }}" alt="Logo K.V.V. Heusden-Zolder" class="logo">
-            <h1>Welkom bij K.V.V. Heusden-Zolder</h1>
-            <p>Welkom op de officiële website van K.V.V. Heusden-Zolder. Hier vind je alle informatie over onze club, teams,
+            <h1>K.V.V. Heusden-Zolder</h1>
+            <p>Welkom op de website van K.V.V. Heusden-Zolder. Hier vind je alle informatie over onze club, teams,
                 wedstrijden en nog veel meer!</p>
         </div>
 
