@@ -4,7 +4,7 @@
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #008000; /* Background color */
+    background-color: #008000;
 }
 
 .accordion-item {
@@ -16,8 +16,8 @@
 }
 
 .accordion-header {
-    background-color: #008000; /* Background color */
-    color: #FFD700; /* Font color */
+    background-color: #008000;
+    color: #FFD700;
     cursor: pointer;
     padding: 15px 20px;
     font-size: 18px;
@@ -39,11 +39,7 @@
     content: '\25BC'; /* Downward arrow */
     font-size: 16px;
     transition: transform 0.3s ease;
-    color: #FFD700; /* Font color for arrow */
-}
-
-.accordion-header.active::after {
-    transform: rotate(-180deg); /* Rotate the arrow upward */
+    color: #FFD700;
 }
 
 .accordion-content {
@@ -54,7 +50,7 @@
     background-color: white;
     font-size: 16px;
     line-height: 1.6;
-    color: #008000; /* Font color for content */
+    color: #008000;
     border-top: 1px solid #ccc;
 }
 .btn {
@@ -62,7 +58,7 @@
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #008000; /* Kleur van de knop */
+    background-color: #008000;
     border: none;
     border-radius: 5px;
     text-align: center;
@@ -71,10 +67,10 @@
 }
 
 .btn:hover {
-    background-color: #006400; /* Donkerder groen bij hover */
+    background-color: #006400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .accordion {
         width: 100%;
         padding: 5px;

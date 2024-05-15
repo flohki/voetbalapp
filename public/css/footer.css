@@ -29,5 +29,17 @@
 .footer-bottom p {
     margin: 0;
     color: #FFD700;
-    font-family: 'Roboto', sans-serif;
+}
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 5px;
+    }
+
+    .footer-img .logo {
+        max-width: 100%;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
 }
