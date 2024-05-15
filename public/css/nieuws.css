@@ -10,7 +10,34 @@ h1 {
     margin-bottom: 20px;
 }
 
-.btn {
+.btn-primary, .btn-danger {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #008000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #006400;
+}
+
+.btn-danger {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #e60000;
+}
+
+.btn-extra {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -21,9 +48,11 @@ h1 {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.btn:hover {
+.btn-extra:hover {
     background-color: #006400;
 }
 
@@ -61,7 +90,7 @@ h1 {
 
 .news-article a {
     font-family: 'Roboto', sans-serif;
-    color: #008000;
+    color: #fff;
     text-decoration: none;
 }
 
