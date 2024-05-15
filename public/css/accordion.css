@@ -5,6 +5,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-color: #008000;
+    box-sizing: border-box;
 }
 
 .accordion-item {
@@ -29,6 +30,7 @@
     align-items: center;
     justify-content: space-between;
     border: none;
+    box-sizing: border-box;
 }
 
 .accordion-header:hover {
@@ -52,6 +54,7 @@
     line-height: 1.6;
     color: #008000;
     border-top: 1px solid #ccc;
+    box-sizing: border-box;
 }
 .btn {
     display: inline-block;
@@ -70,19 +73,14 @@
     background-color: #006400;
 }
 
-@media (max-width: 800px) {
-    .accordion {
-        width: 100%;
-        padding: 5px;
-    }
-
+@media (max-width: 600px) {
     .accordion-header {
-        padding: 10px 15px;
-        font-size: 16px;
+        font-size: 14px;
+        padding: 8px 10px;
     }
 
     .accordion-content {
-        padding: 10px 15px;
-        font-size: 14px;
+        font-size: 12px;
+        padding: 8px 10px;
     }
 }
